@@ -1,4 +1,6 @@
-const cars: Car[] = [
+import {Car} from "../models/car.model";
+
+export const cars: Car[] = [
   {
     make: "Toyota",
     model: "Camry",

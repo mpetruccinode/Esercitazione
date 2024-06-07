@@ -1,6 +1,7 @@
 import { BehaviorSubject } from 'rxjs';
 import { Person } from '../models/person.model';
-import { Car } from '../models/car.model';
+import {Car} from "../models/car.model";
+
 
 export class DataService {
   private peopleSource = new BehaviorSubject<Person[]>([]);

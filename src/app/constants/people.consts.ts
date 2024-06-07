@@ -1,4 +1,6 @@
-const people: Person[] = [
+import {Person} from "../models/person.model";
+
+export const people: Person[] = [
   {
     firstName: "John",
     lastName: "Doe",
