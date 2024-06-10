@@ -6,6 +6,7 @@ import {CarsComponent} from "./cars/cars.component";
 import {HomePageComponent} from "./home-page/home-page.component";
 import {MenubarModule} from "primeng/menubar";
 import { TableModule } from 'primeng/table';
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [],
@@ -22,12 +23,14 @@ import { TableModule } from 'primeng/table';
       }
     ]),
     MenubarModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ],
   exports: [
     MenubarModule,
     RouterModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ]
 })
 export class AppModule { }

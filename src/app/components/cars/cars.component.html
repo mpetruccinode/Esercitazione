@@ -1,5 +1,6 @@
 <div class="table">
   <app-searchbar (onFilter)="searchBar($event)"></app-searchbar>
+  <p-button label="Add car" size="small" />
   <p-table #dt [value]="cars"
            [globalFilterFields]="['make','model','year','color']"
            styleClass="p-datatable-gridlines">
