@@ -5,12 +5,13 @@
            styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">
       <tr>
-        <th>Make</th>
-        <th>Model</th>
-        <th>Year</th>
-        <th>Color</th>
+        <th pSortableColumn="make">Make <p-sortIcon field="make"></p-sortIcon></th>
+        <th pSortableColumn="model">Model <p-sortIcon field="model"></p-sortIcon></th>
+        <th pSortableColumn="year">Year <p-sortIcon field="year"></p-sortIcon></th>
+        <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>
       </tr>
     </ng-template>
+
     <ng-template pTemplate="body" let-car>
       <tr>
         <td>{{car.make}}</td>
