@@ -15,13 +15,15 @@ import {Button} from "primeng/button";
 export class CarsComponent implements OnInit {
   @ViewChild('dt') table!: Table;
   cars!: Car[];
+  filterCars: Car[] = [];
 
   ngOnInit() {
+    this.filterCars = cars;
     this.cars = cars;
   }
 
   searchBar(value: string) {
-    this.table.filterGlobal(value, 'contains');
+    this.filterCars = this.cars.filter((car) => car.model.toLowerCase().includes(value.toLowerCase()) || car.year.toString().includes(value))
   }
 
 }

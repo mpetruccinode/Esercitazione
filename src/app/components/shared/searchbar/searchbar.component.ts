@@ -1,21 +1,24 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {InputTextModule} from "primeng/inputtext";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-searchbar',
   standalone: true,
-  imports: [],
+  imports: [
+    InputTextModule,
+    FormsModule
+  ],
   templateUrl: './searchbar.component.html',
   styleUrl: './searchbar.component.scss'
 })
 export class SearchbarComponent {
   @Output() onFilter = new EventEmitter<string>();
 
-  applyFilter(event: Event) {
-    const target = event.target as HTMLInputElement | null;
-    if (target !== null) {
-      const value = target.value;
-      this.onFilter.emit(value);
-    }
+  keyword: string = '';
+
+  applyFilter() {
+    this.onFilter.emit(this.keyword);
   }
 
 }

@@ -1,7 +1,7 @@
 <p-button class="btn" label="Add car" size="small" />
 <div class="table">
   <app-searchbar (onFilter)="searchBar($event)"></app-searchbar>
-  <p-table #dt [value]="cars"
+  <p-table #dt [value]="filterCars"
            [globalFilterFields]="['make','model','year','color']"
            styleClass="p-datatable-gridlines">
     <ng-template pTemplate="header">

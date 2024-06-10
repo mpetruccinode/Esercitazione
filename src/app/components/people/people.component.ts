@@ -19,13 +19,15 @@ import {SearchbarComponent} from "../shared/searchbar/searchbar.component";
 export class PeopleComponent implements OnInit {
   @ViewChild('dt') table!: Table;
   people!: Person[];
+  filterPerson: Person[] = []
 
 
   ngOnInit() {
+    this.filterPerson = people
     this.people = people;
   }
 
   searchBar(value: string) {
-    this.table.filterGlobal(value, 'contains');
+    this.filterPerson = []
   }
 }

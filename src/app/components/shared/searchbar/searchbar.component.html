@@ -1,2 +1,2 @@
-<input class="filter" type="text" pInputText placeholder="Search..." (input)="applyFilter($event)">
+<input class="filter" type="text" pInputText placeholder="Search..." [(ngModel)]="keyword" (ngModelChange)="applyFilter()">
 
