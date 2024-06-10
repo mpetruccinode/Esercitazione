@@ -1,5 +1,7 @@
 <div class="table">
-  <p-table [value]="people"
+  <app-searchbar (onFilter)="searchBar($event)"></app-searchbar>
+  <p-table #dt [value]="people"
+           [globalFilterFields]="['firstName','lastName','age','email']"
            styleClass="p-datatable-gridlines"
   >
     <ng-template pTemplate="header">
